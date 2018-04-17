@@ -7,7 +7,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>leetcode 盛最多水的容器 | FBI WARING</title>
+  <title>ʢ���ˮ������ | FBI WARING</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -15,18 +15,18 @@
     <meta name="keywords" content="leetcode,python," />
   
 
-  <meta name="description" content="Given n non-negative integers a1, a2, ..., an, where each represents a point at coordinate (i, ai). n vertical lines are drawn such that the two endpoints of line i is at (i, ai) and (i, 0). Find two">
+  <meta name="description" content="Given an array nums of n integers, are there elements a, b, c in nums such that a + b + c = 0? Find all unique triplets in the array which gives the sum of zero����һ������ n ������������ nums���ж� num">
 <meta name="keywords" content="leetcode,python">
 <meta property="og:type" content="article">
-<meta property="og:title" content="leetcode 盛最多水的容器">
-<meta property="og:url" content="http://yoursite.com/2018/04/16/leetcode-盛最多水的容器/index.html">
+<meta property="og:title" content="ʢ���ˮ������">
+<meta property="og:url" content="http://yoursite.com/2018/04/17/leetcode-3sum/index.html">
 <meta property="og:site_name" content="FBI WARING">
-<meta property="og:description" content="Given n non-negative integers a1, a2, ..., an, where each represents a point at coordinate (i, ai). n vertical lines are drawn such that the two endpoints of line i is at (i, ai) and (i, 0). Find two">
+<meta property="og:description" content="Given an array nums of n integers, are there elements a, b, c in nums such that a + b + c = 0? Find all unique triplets in the array which gives the sum of zero����һ������ n ������������ nums���ж� num">
 <meta property="og:locale" content="zH-Hans">
-<meta property="og:updated_time" content="2018-04-16T12:20:00.767Z">
+<meta property="og:updated_time" content="2018-04-17T15:00:24.426Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="leetcode 盛最多水的容器">
-<meta name="twitter:description" content="Given n non-negative integers a1, a2, ..., an, where each represents a point at coordinate (i, ai). n vertical lines are drawn such that the two endpoints of line i is at (i, ai) and (i, 0). Find two">
+<meta name="twitter:title" content="ʢ���ˮ������">
+<meta name="twitter:description" content="Given an array nums of n integers, are there elements a, b, c in nums such that a + b + c = 0? Find all unique triplets in the array which gives the sum of zero����һ������ n ������������ nums���ж� num">
 
   
 
@@ -186,14 +186,14 @@
 
 
 <div class="content content-post CENTER">
-   <article id="post-leetcode-盛最多水的容器" class="article article-type-post" itemprop="blogPost">
+   <article id="post-leetcode-3sum" class="article article-type-post" itemprop="blogPost">
   <header class="article-header">
-    <h1 class="post-title">leetcode 盛最多水的容器</h1>
+    <h1 class="post-title">ʢ���ˮ������</h1>
 
     <div class="article-meta">
       <span>
         <i class="icon-calendar"></i>
-        <span>2018.04.16</span>
+        <span>2018.04.17</span>
       </span>
 
       
@@ -221,13 +221,11 @@
 
   <div class="article-content">
     
-      <pre><code>Given n non-negative integers a1, a2, ..., an, where each represents a point at coordinate (i, ai). n vertical lines are drawn such that the two endpoints of line i is at (i, ai) and (i, 0). Find two lines, which together with x-axis forms a container, such that the container contains the most water
-给定 n 个非负整数 a1，a2，...，an，每个数代表坐标中的一个点 (i, ai) 。画 n 条垂直线，使得垂直线 i 的两个端点分别为 (i, ai) 和 (i, 0)。找出其中的两条线，使得它们与 x 轴共同构成的容器可以容纳最多的水。
-注意：你不能倾斜容器，n 至少是2
-
-
-思路：两个指针一前一后向中间检索，取指针所表示height较大者指针不变，另一个较小者的指针++或--。
-</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def maxArea(self, height):</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        :type height: List[int]</span><br><span class="line">        :rtype: int</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        maxsize=0</span><br><span class="line">        i=0</span><br><span class="line">        j=len(height)-1</span><br><span class="line">        while(i&lt;j):</span><br><span class="line">            maxsize=max(maxsize,((j-i)*(min(height[i],height[j]))))</span><br><span class="line">            if(height[i]&lt;height[j]):</span><br><span class="line">                i+=1</span><br><span class="line">            elif(height[i]&gt;=height[j]):</span><br><span class="line">                j-=1</span><br><span class="line">        return maxsize</span><br></pre></td></tr></table></figure>
+      <p>Given an array nums of n integers, are there elements a, b, c in nums such that a + b + c = 0? Find all unique triplets in the array which gives the sum of zero<br>����һ������ n ������������ nums���ж� nums ���Ƿ��������Ԫ�� a��b��c ��ʹ�� a + b + c = 0 ���ҳ��������������Ҳ��ظ�����Ԫ�顣</p>
+<pre><code>ע�⣺���в����԰����ظ�����Ԫ�顣
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Given array nums = [-1, 0, 1, 2, -1, -4],</span><br><span class="line"></span><br><span class="line">A solution set is:</span><br><span class="line">[</span><br><span class="line">  [-1, 0, 1],</span><br><span class="line">  [-1, -1, 2]</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<p>˼·��a+b+c=0<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a+b=-c<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ת��Ϊ��2sum����<br>���������飬Ȼ������ָ���������Ѱ�ҡ������ٸ�hash�����ɣ�˯����</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def threeSum(self, nums):</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        :type nums: List[int]</span><br><span class="line">        :rtype: List[List[int]]</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        sets = []</span><br><span class="line">        nums.sort()</span><br><span class="line">        for i in range(0,len(nums)) :</span><br><span class="line">            if i &gt; 0 and nums[i] == nums[i-1] :</span><br><span class="line">                continue</span><br><span class="line">            left = i</span><br><span class="line">            right = len(nums)-1</span><br><span class="line">            tag = -nums[i]</span><br><span class="line">            while left &lt; right :</span><br><span class="line">                tag = -nums[i]</span><br><span class="line">                if nums[left]+nums[right] &lt; tag :</span><br><span class="line">                    left += 1</span><br><span class="line">                elif nums[left]+nums[right] &gt; tag :</span><br><span class="line">                    right -= 1</span><br><span class="line">                else :</span><br><span class="line">                    sets.append([nums[left],nums[i],nums[right]])</span><br><span class="line">                    left += 1</span><br><span class="line">                    right -= 1</span><br><span class="line">                    while nums[left] == nums[left+1] :</span><br><span class="line">                            left += 1</span><br><span class="line">                    while nums[right] == nums[right-1] :</span><br><span class="line">                            right -= 1</span><br><span class="line">        return sets</span><br></pre></td></tr></table></figure>
     
   </div>
 
@@ -242,10 +240,10 @@
 
    
   <div class="box-prev-next clearfix">
-    <a class="show pull-left" href="/2018/04/10/python-简单socket/">
+    <a class="show pull-left" href="/2018/04/16/leetcode-盛最多水的容器/">
         <i class="icon icon-angle-left"></i>
     </a>
-    <a class="show pull-right" href="/2018/04/17/leetcode-3sum/">
+    <a class="hide pull-right" href="/">
         <i class="icon icon-angle-right"></i>
     </a>
   </div>
@@ -370,7 +368,7 @@
   <script>
     var disqus_shortname = 'forsigner';
     
-    var disqus_url = 'http://yoursite.com/2018/04/16/leetcode-盛最多水的容器/';
+    var disqus_url = 'http://yoursite.com/2018/04/17/leetcode-3sum/';
     
     (function(){
       var dsq = document.createElement('script');
